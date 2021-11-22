@@ -1,0 +1,30 @@
+:root 
+{
+    --none-white: rgba(255, 255, 255, 0);
+    --default-text-color: rgb(0, 0, 0);
+    --settings-panel-border: rgb(206, 206, 206);
+    --settings-option-background: rgb(210, 177, 179);
+    --settings-option-border: rgba(255, 164, 164, 0.726);
+    --box-background-hover: rgba(255, 255, 255, 0.685);
+    --background-color-main: rgb(243, 239, 239);
+    --switch-background: rgba(240, 229, 229, 0.637);
+    --accentColorBg: rgba(202, 0, 0, 0.308);
+    --customHoverColor: rgba(255, 35, 35, 0.4);
+    --switch-label-text-color: rgba(0, 0, 0, 0.904);
+    --swtich-select-background: rgb(224, 42, 42);
+    --expression-text-color: rgb(29, 29, 29);
+    --toast-text-color: rgb(255, 255, 255);
+    --toast-background-color: rgba(51, 51, 51, 1);
+    --history-delete-hover: rgba(255, 52, 52, 0.781);
+    --history-background-hover: rgba(255, 255, 255, 0.911);
+
+    --default-box-background-color: rgba(255, 255, 255, 0.377);
+    --main-background: rgba(255, 255, 255, 0.39);
+    --operation-scrollbar-thumb-background: rgba(255, 255, 255, 0.418);
+    --default-background-color: rgba(255, 255, 255, 0.418);
+    --round_button-background-hover: rgba(255, 255, 255, 0.568);
+    --options-background-hover: rgba(255, 255, 255, 0.568);
+    --scrollbar-thumb-background: rgba(255, 255, 255, 0.637);
+}
+
+

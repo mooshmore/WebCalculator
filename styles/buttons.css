@@ -1,0 +1,61 @@
+/* All */
+.box {
+    font-size: 1.37rem;
+    width: 98%;
+    height: 98%;
+    line-height: 5.8rem;
+    text-align: center;
+    border-radius: 5%;
+    background-color: var(--default-box-background-color);
+    -webkit-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+    border: 0rem solid var(--none-white);
+    -webkit-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+
+.box:hover {
+    background-color: var(--box-background-hover);
+}
+
+/* Power */
+.box.power {
+    padding-left: 0.55rem;
+}
+
+.box.power > .power_sup {
+    font-size: 1rem;
+    position: relative;
+    bottom: 0.2rem;
+}
+
+/* Radical */
+.box > .radical_sup {
+    position: relative;
+    left: 0.4rem;
+    bottom: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.box > span {
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.box > span > span {
+    text-align: left; 
+    border-top: 0.06rem solid black;
+}
+
+.box > span > span > span {
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Pi, Absolute */
+.pi, .absolute {
+        font-family: 'Open Sans', sans-serif !important;
+}

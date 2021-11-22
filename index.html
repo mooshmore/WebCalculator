@@ -1,0 +1,157 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/expression_inputs.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/buttons.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/animations.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/scrollbars.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/colors.css">
+
+</head>
+<body>
+    <div id="container">
+
+
+        <div class="grid-container">
+            <div class="box power">
+                x<sup class="power_sup">y</sup>
+            </div>
+            <div class="box radical">
+                <sup class="radical_sup">y</sup><span>√<span><span>x</span></span></span>
+            </div>
+            <div class="box absolute">|x|</div>
+            <div class="box factorial">n!</div>
+            <div class="box pi">π</div>
+            <div class="box log">log</div>
+            <div class="box zero">0</div>
+            <div class="box one">1</div>
+            <div class="box two">2</div>
+            <div class="box three">3</div>
+            <div class="box four">4</div>
+            <div class="box five">5</div>
+            <div class="box six">6</div>
+            <div class="box seven">7</div>
+            <div class="box eight">8</div>
+            <div class="box nine">9</div>
+            <div class="box sin">sin</div>
+            <div class="box cos">cos</div>
+            <div class="box tan">tan</div>
+            <div class="box forward">→</div>
+            <div class="box backspace">←</div>
+            <div class="box brackets">()</div>
+            <div class="box randomize">rand</div>
+            <div class="box minus">-</div>
+            <div class="box divide">/</div>
+            <div class="box multiplication">x</div>
+            <div class="box plus">+</div>
+            <div class="box dot">.</div>
+            <div class="box equals">=</div>
+            <div class="calculate">
+                <div class="operation">
+                    
+                </div> 
+            <div class="expression" id="style-2">
+                <span class="bra" id="0">
+                    <span id="1" class="x mainX">
+                        <span class="whitespace" id="1.1" onclick="mouseNavigation(1)" onmouseover="customHover(1, event)" onmouseout="clearBackground(1)">
+                        </span>
+                    </span>
+                </span>
+            </div>
+
+
+            </div>
+            <div class="main">
+                <div class="main_title">Kalkulator naukowy</div>
+                <div class="main_box"></div>
+                <div class="undo">
+                    <img id="undo" src="images/undo.svg">
+                </div>
+                <div class="redo">
+                    <img id="redo" src="images/undo.svg">
+                </div>
+                <div class="settings">
+                    <img id="settings" src="images/settings.svg" class="settings_image">
+                    <div class="settings_panel">
+                        <div class="setting_option">
+                            <div class="setting_option_title">
+                                Jednostki
+                            </div>
+                            <div class="setting_option_switch">
+                                <div class="switch">
+                                    <input type="radio" class="switch-input" name="view" value="deg" id="deg" checked>
+                                    <label for="deg" class="switch-label switch-label-off">Deg</label>
+                                    <input type="radio" class="switch-input" name="view" value="rad" id="rad">
+                                    <label for="rad" class="switch-label switch-label-on">Rad</label>
+                                    <span class="switch-selection"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting_option">
+                            <div class="setting_option_title">
+                                Zaokrąglanie
+                            </div>
+                            <div class="setting_option_switch">
+                                <div class="round">
+                                    <span class="round_button" id="decrease">&lt;</span>
+                                    <div class="round_value">Brak</div>
+                                    <span class="round_button" id="increase">&gt;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="history_header">
+                <div class="history_title">
+                    Historia
+                </div>
+                <div class="history_bin">
+                    <img id="bin" src="images/dustbin.svg">
+                </div>
+            </div>
+            <div class="history">
+
+            </div>
+            
+          </div>
+        <div id="toast_parent">
+            <div id="toast"></div>
+        </div>
+    </div>  
+            
+
+    <script type="text/javascript" src="scripts/calc/calc.js"></script>
+
+    <script type="text/javascript" src="scripts/expression_works/addValues.js"></script>
+    <script type="text/javascript" src="scripts/expression_works/deleteValues.js"></script>
+    <script type="text/javascript" src="scripts/expression_works/multi_DimensionalTableOperations.js"></script>
+
+    <script type="text/javascript" src="scripts/inputs/keyboardInputs.js"></script>
+    <script type="text/javascript" src="scripts/inputs/pageInputs.js"></script>
+
+    <script type="text/javascript" src="scripts/navigation/mouseNavigation.js"></script>
+    <script type="text/javascript" src="scripts/navigation/navigation.js"></script>
+
+    <script type="text/javascript" src="scripts/parser/clearStuff.js"></script>
+    <script type="text/javascript" src="scripts/parser/parser.js"></script>
+    
+    <script type="text/javascript" src="scripts/visuals/animations.js"></script>
+    <script type="text/javascript" src="scripts/visuals/colors.js"></script>
+    <script type="text/javascript" src="scripts/visuals/resultAnimation.js"></script>
+
+    <script type="text/javascript" src="scripts/page_works/undo_and_redo.js"></script>
+    <script type="text/javascript" src="scripts/page_works/settings.js"></script>
+    <script type="text/javascript" src="scripts/page_works/local_storage.js"></script>
+    <script type="text/javascript" src="scripts/page_works/history.js"></script>
+    <script type="text/javascript" src="scripts/page_works/toastMessage.js"></script>
+
+</body>
+</html>

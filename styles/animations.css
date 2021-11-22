@@ -1,0 +1,131 @@
+/* toast */
+
+#toast_parent {
+    position: fixed;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -ms-grid;
+    display: grid;
+}
+
+#toast {
+    position: relative;
+    bottom: 0;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    min-width: 17.5rem;
+    max-width: 40.625rem;
+    background-color: var(--toast-background-color);
+    color: var(--toast-text-color);
+    text-align: center;
+    border-radius: 0.9375rem;
+    padding: 1rem;
+    font-size: 1.0625rem;
+    opacity: 0;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+/* Switch */
+
+.switch {
+  position: relative;
+  height: 2.125rem;
+  width: 5.5rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  background: var(--switch-background);
+  border-radius: 1rem;
+}
+
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 2.625rem;
+  font-size: 1.05rem;
+  line-height: 2.125rem;
+  color: var(--switch-label-text-color);
+  text-align: center;
+  cursor: pointer;
+}
+
+.switch-label-off {
+  padding-left: 0.125rem;
+}
+
+.switch-label-on {
+  padding-right: 0.125rem;
+}
+
+.switch-input {
+  display: none;
+}
+.switch-input:checked + .switch-label {
+  color: var(--default-text-color);
+  -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: color, text-shadow;
+  -o-transition-property: color, text-shadow;
+  transition-property: color, text-shadow;
+}
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  left: 2.75rem;
+}
+
+.switch-selection {
+  position: absolute;
+  z-index: 1;
+  top: 0.125rem;
+  left: 0.125rem;
+  display: block;
+  width: 2.625rem;
+  height: 1.875rem;
+  border-radius: 1rem;
+  background-color: var(--swtich-select-background);
+  -webkit-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+
+.history_add_animation {
+  -webkit-animation: history_animation_fadein 600ms;
+          animation: history_animation_fadein 600ms;
+}
+
+@-webkit-keyframes history_animation_fadein {
+  0%   {opacity: 0; height: 0;}
+  25%   {opacity:  0;}
+  100% {opacity: 1; height: 6rem;}
+}
+
+@keyframes history_animation_fadein {
+  0%   {opacity: 0; height: 0;}
+  25%   {opacity:  0;}
+  100% {opacity: 1; height: 6rem;}
+}
+
+
+.history_delete_animation {
+  -webkit-animation: history_animation_fadeout 400ms;
+          animation: history_animation_fadeout 400ms;
+}
+
+@-webkit-keyframes history_animation_fadeout {
+  0%   {opacity: 1; height: 6rem;}
+  25%   {opacity:  0;}
+  100% {opacity: 0; height: 0rem;}
+}
+
+@keyframes history_animation_fadeout {
+  0%   {opacity: 1; height: 6rem;}
+  25%   {opacity:  0;}
+  100% {opacity: 0; height: 0rem;}
+}
