@@ -56,10 +56,10 @@ function calculate(expression){
     const operations = [`-`, `+`, `*`, `/`];
     const operations_special = [`*`, `/`];
     if (operations_special.includes(expression[0].charAt(0))) { // First character
-      toastMessage(`Błąd: działanie nie może zaczynać się operacją`);
+      toastMessage(`Error: działanie nie może zaczynać się operacją`);
       return false;
     } else if (operations.includes(expression[0].slice(-1))) { // Last character
-      toastMessage(`Błąd: działanie nie może kończyć się operacją`);
+      toastMessage(`Error: działanie nie może kończyć się operacją`);
       return false;
     }
 
@@ -68,7 +68,7 @@ function calculate(expression){
     result = result.toString();
     resultAnimation(result);
   } catch (err) {
-    toastMessage(`Błąd: nieprawidłowe umieszczenie operacji lub kropki. Sprawdź swoje działanie i spróbuj ponownie.`, 6000);
+    toastMessage(`Error: nieprawidłowe umieszczenie operacji lub kropki. Sprawdź swoje działanie i spróbuj ponownie.`, 6000);
     console.error(`Treść błędu: ${err}`);
     return;
   }
@@ -91,10 +91,10 @@ function operation(type) {
         const operations_special = [`*`, `/`];
         
         if (operations_special.includes(output.charAt(0))) { // First character
-          toastMessage(`Błąd: działanie nie może zaczynać się operacją`);
+          toastMessage(`Error: equation can't start with an operation`);
           return false;
         } else if (operations.includes(output.slice(-1))) { // Last character
-          toastMessage(`Błąd: działanie nie może kończyć się operacją`);
+          toastMessage(`Error: equation can't end with an operation`);
           return false;
         }
         output = eval(output);
@@ -110,7 +110,7 @@ function operation(type) {
       break;
     case 'rad': // radical
       if ( y < 0) {
-        toastMessage(`Błąd: wartość y w pierwiastku jest ujemna`);
+        toastMessage(`Error: value y in a square root can't be negative`);
         return false;
       } else {
         x = 1 / x;
@@ -119,7 +119,7 @@ function operation(type) {
       break;
     case 'ran': // random
       if ( y < x) {
-        toastMessage(`Błąd: wartość x nie może być większa od wartości y w generatorze losowych liczb.`);
+        toastMessage(`Error: value x can't be bigger than value y in a random number generator`);
         return false;
       }
       output = Math.floor(Math.random() * (y - x + 1) + x);
@@ -182,13 +182,13 @@ function operation(type) {
       break;
     case 'log':
       if ( x < 0 ){
-        toastMessage(`Błąd: wartość logarytmu x jest ujemna`);
+        toastMessage(`Error: value x of a logarithm can't be negative`);
         return false;
       } else if ( y < 0 ){
-        toastMessage(`Błąd: wartość logarytmu y jest ujemna`);
+        toastMessage(`Error: value y of a logarithm can't be negative`);
         return false;
       } else if ((x == 1 && y == 1)) {
-        toastMessage(`Błąd: wartość logarytmu x i y wynosi 1`);
+        toastMessage(`Error: value x and y of a logarithm can't equal 1`);
         return false;
       } else {
         output = Math.log(y) / Math.log(x);
@@ -203,7 +203,8 @@ function operation(type) {
   }
   return output;
   } catch (err) {
-    toastMessage(`Błąd: nieprawidłowe umieszczenie operacji lub kropki. Odświerz stronę, sprawdź swoje działanie i spróbuj ponownie.`);
+    toastMessage(`Error: nieprawidłowe umieszczenie operacji lub kropki. Odświerz stronę, sprawdź swoje działanie i spróbuj ponownie.`);
+    toastMessage(`Error: improper placement of an operation or a dot. Refresh the site, check your equation and try again.`);
     console.error(`Treść błędu: ${err}`);
     return;
   }
