@@ -19,7 +19,7 @@ function toastTimeout(timeout = 3500) {
 };
 
 if (!window.chrome && localStorage.getItem(`browser_chrome_told`) == null) {
-    toastMessage(`For the best performance it is recommended to use a Chrome browser or a one working on Chromium engine.`, 7000);
+    toastMessage(`For the best performance, it is recommended to use a Chrome browser or one working on Chromium engine.`, 7000);
     localStorage.setItem(`browser_chrome_told`, `true`);
 }
 
