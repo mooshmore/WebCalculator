@@ -1,5 +1,5 @@
 # WebCalculator
 
-A scientific web calculator, one of my first major projects.
+A browser scientific calculator. 
 
 ![WebCaluclator image](https://i.imgur.com/AI76ISs.png)
